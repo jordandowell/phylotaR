@@ -22,7 +22,7 @@ blastdb_gen <- function(sqs, dbfl, ps) {
       file = fl, append = TRUE
     )
   }
-  args <- c("-in", fl, "-dbtype", "nucl")
+  args <- c("-in", fl, "-dbtype", "nucl", "-out", txid[1])
   info(lvl = 3, ps = ps, "Running makeblastdb")
   res <- cmdln(
     cmd = ps[["mkblstdb"]], args = args,
